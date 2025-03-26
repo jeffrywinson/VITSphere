@@ -1,5 +1,6 @@
 import React,{useState} from 'react';
 import { useNavigate } from "react-router-dom";
+import './CreatePost.css'
 
 const CreatePost = ({ addArticle }) => {
 
@@ -20,8 +21,8 @@ const CreatePost = ({ addArticle }) => {
 
   return (
     <>
-      <div>
-        <form onSubmit={handleSubmit}>
+      <div className='create-post'>
+        <form className='post-form' onSubmit={handleSubmit}>
           <label htmlFor="name">Post Name: </label>
           <input
             type="text"

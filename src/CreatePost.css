@@ -1,0 +1,14 @@
+html{
+    background: linear-gradient(135deg, #33f3cd, #26c3f3);
+}
+.create-post{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+.post-form{
+    display: flex;
+    flex-direction: column;
+    
+}
