@@ -2,7 +2,7 @@ import React, {useState} from 'react';
 import './ArticlesPage.css';
 import Article from './components/Article';
 
-function ArticlesPage() {
+function ArticlesPage(props) {
   const [articles, setArticles] = useState([])
   const [article, setArticle] = useState({
     title: "",
@@ -25,7 +25,7 @@ function ArticlesPage() {
 
   function submitNote(event) {
     props.onAdd(article);
-    setNote({
+    setArticle({
       title: "",
       desc: "",
       content: ""
