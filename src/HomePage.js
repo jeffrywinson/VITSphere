@@ -14,7 +14,7 @@ function HomePage() {
           <h1>Welcome to College Insights</h1>
           <p>Explore articles about college life, tips, and more.</p>
           <Link to="/articles">
-            <button>Discover More</button>
+            <button className='btn'>Discover More</button>
           </Link>
         </div>
       </section>
@@ -41,7 +41,7 @@ function HomePage() {
       </section>
 
       <section className='button-section'>
-        <button className="button-style" onClick={() => navigate("/create")}>
+        <button className="btn" onClick={() => navigate("/create")}>
           Create Post
         </button>
       </section>

@@ -8,7 +8,6 @@ body, html{
     display: flex;
     justify-content: center;
     align-items: center;
-    /* position: relative; */
     background-color: transparent;
     margin-top: 5%;
 }
