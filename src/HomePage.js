@@ -15,7 +15,7 @@ function HomePage() {
           <h1>VITSphere</h1>
           <p>Discover articles about college life, tips, and more.</p>
           <Link to="/articles">
-            <button className='btn'>Discover More</button>
+            <button className='btn'>Explore</button>
           </Link>
         </div>
       </section>
