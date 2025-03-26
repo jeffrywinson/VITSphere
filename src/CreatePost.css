@@ -1,6 +1,6 @@
 @import url('https://fonts.googleapis.com/css2?family=Boldonse&family=Comfortaa:wght@300..700&display=swap');
 
-html{
+body, html{
     background: linear-gradient(to right, #33f3cd, #26c3f3);
 }
 
@@ -8,7 +8,8 @@ html{
     display: flex;
     justify-content: center;
     align-items: center;
-    position: relative;
+    /* position: relative; */
+    background-color: transparent;
     margin-top: 5%;
 }
 
