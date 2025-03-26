@@ -8,14 +8,6 @@ import CreatePost from './CreatPost';
 
 function HomePage() {
   
-  const App = () => {
-    const [articles, setArticles] = useState([]);
-  
-    const addArticle = (newArticle) => {
-      setArticles([...articles, newArticle]);
-    };  
-  }
-  
   const navigate = useNavigate();
   return (
     <div className="home-page">
