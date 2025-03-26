@@ -1,4 +1,4 @@
-@import url('https://fonts.googleapis.com/css2?family=Boldonse&family=Comfortaa:wght@300..700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Comfortaa:wght@300..700&family=Merriweather:ital,opsz,wght@0,18..144,300..900;1,18..144,300..900&display=swap');
 
 body, html{
     background: linear-gradient(to right, #33f3cd, #26c3f3);
@@ -25,6 +25,26 @@ body, html{
     padding: 1rem;
     box-shadow: 2px 2px 10px rgba(0, 0, 0, 0.1); 
     margin-bottom: 1rem; 
+}
+
+.article-pg-desc{
+    font-family: "Comfortaa", sans-serif;
+}
+
+.article-pg-content{
+    font-family: "Comfortaa", sans-serif;
+}
+
+.article-pg-header{
+    font-family: "Merriweather", serif;
+}
+
+.article-pg-main-header{
+    font-family: "Merriweather", serif;
+}
+
+strong{
+    font-family: "Merriweather", serif;
 }
 
 .button-container{

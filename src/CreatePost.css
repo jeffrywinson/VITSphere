@@ -1,4 +1,4 @@
-@import url('https://fonts.googleapis.com/css2?family=Boldonse&family=Comfortaa:wght@300..700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Comfortaa:wght@300..700&family=Merriweather:ital,opsz,wght@0,18..144,300..900;1,18..144,300..900&display=swap');
 
 body, html{
     background: linear-gradient(to right, #33f3cd, #26c3f3);
@@ -24,7 +24,7 @@ body, html{
 }
 
 .post-form{
-    font-family: "Boldonse", system-ui;
+    font-family: "Merriweather", serif;
     display: flex;
     flex-direction: column;
     gap: 1rem;
@@ -50,6 +50,11 @@ textarea{
     padding: 0.5rem;
     border-radius: 0.5rem;
     height: 12rem;
+}
+
+.edit-header{
+    font-family: "Merriweather", serif;
+    text-align: center;
 }
 
 .btn {

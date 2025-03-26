@@ -1,5 +1,6 @@
 import React, { useState, useEffect } from "react";
 import { useNavigate, useParams } from "react-router-dom";
+import './CreatePost.css'
 
 
 const EditPost = ({ articles, handleUpdate }) => {
@@ -35,40 +36,42 @@ const EditPost = ({ articles, handleUpdate }) => {
   };
 
   return (
-    <div>
-      <h2>Edit Post</h2>
-      <form onSubmit={handleSubmit}>
-        <label htmlFor="name">Post Name: </label>
-        <input
-          type="text"
-          id="name"
-          value={title}
-          onChange={(e) => setTitle(e.target.value)}
-          placeholder="Enter post title"
-          required
-        />
+    <div className="container">
+      <div className="create-post">        
+        <form className='post-form' onSubmit={handleSubmit}>
+          <h2 className="edit-header">Edit Post</h2>
+          <label htmlFor="name">Post Name: </label>
+          <input className='post-name'
+            type="text"
+            id="name"
+            value={title}
+            onChange={(e) => setTitle(e.target.value)}
+            placeholder="Enter post title"
+            required
+          />
 
-        <label htmlFor="short">Short Description:</label>
-        <input
-          type="text"
-          id="short"
-          value={shortDescription}
-          onChange={(e) => setShortDescription(e.target.value)}
-          placeholder="Enter short description"
-          required
-        />
+          <label htmlFor="short">Short Description:</label>
+          <input className='short-desc'
+            type="text"
+            id="short"
+            value={shortDescription}
+            onChange={(e) => setShortDescription(e.target.value)}
+            placeholder="Enter short description"
+            required
+          />
 
-        <label htmlFor="content">Content: </label>
-        <textarea
-          value={content}
-          onChange={(e) => setContent(e.target.value)}
-          placeholder="Enter post content"
-          required
-          id="content"
-        />
+          <label htmlFor="content">Content: </label>
+          <textarea className='post-content'
+            value={content}
+            onChange={(e) => setContent(e.target.value)}
+            placeholder="Enter post content"
+            required
+            id="content"
+          />
 
-        <button type="submit">Update</button>
-      </form>
+          <button  className="btn" type="submit">Update</button>
+        </form>
+      </div>
     </div>
   );
 };

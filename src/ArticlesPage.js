@@ -13,14 +13,14 @@ const ArticlesPage = ({ articles, setArticles }) => {
 
   return (
     <div className="articles-outer">
-      <h2>Articles</h2>
+      <h2 className="article-pg-main-header">Articles</h2>
       {articles.length > 0 ? (
         <div className="article-container">
           {articles.map((article, index) => (
             <div key={index} className="article-card">
-              <h3>{article.title}</h3>
-              <p><strong>Description:</strong> {article.shortDescription}</p>
-              <p><strong>Content:</strong> {article.content}</p>
+              <h3 className="article-pg-header">{article.title}</h3>
+              <p className="article-pg-desc"><strong>Description:</strong> {article.shortDescription}</p>
+              <p className="article-pg-content"><strong>Content:</strong> {article.content}</p>
               
               <div className="button-container">
                 <button className="btn" onClick={() => navigate(`/edit/${index}`)}>Edit</button>
