@@ -9,7 +9,7 @@
     align-items: center;
   }
   
-  .article-card {
+  .a-card {
     background-color: #f7f7f7;
     padding: 20px;
     border-radius: 10px;
@@ -18,7 +18,7 @@
     width: 80%;
   }
   
-  .article-card button {
+  .a-card button {
     padding: 10px 20px;
     border: none;
     background-color: #007bff;
