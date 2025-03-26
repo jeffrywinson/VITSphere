@@ -11,10 +11,10 @@ function HomePage() {
 
       <section className="hero">
         <div className="hero-content">
-          <h1>Welcome to College Insights</h1>
-          <p>Explore articles about college life, tips, and more.</p>
+          <h1>VITSphere</h1>
+          <p>Discover articles about college life, tips, and more.</p>
           <Link to="/articles">
-            <button>Discover More</button>
+            <button>Explore</button>
           </Link>
         </div>
       </section>

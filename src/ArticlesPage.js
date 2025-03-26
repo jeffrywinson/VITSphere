@@ -29,6 +29,7 @@ const ArticlesPage = ({ articles, setArticles }) => {
               </div>
             </div>
           ))}
+          <button onClick={() => navigate("/create")}>Create Another Post!</button>
         </div>
       ) : (
         <p>No articles yet. <button onClick={() => navigate("/create")}>Create One!</button></p>
