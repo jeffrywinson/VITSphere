@@ -1,8 +1,22 @@
-import React from 'react';
+import React,{useState} from 'react';
 import './HomePage.css';
+import './ArticlesPage.css'
 import { Link } from 'react-router-dom';
+import { useNavigate } from "react-router-dom";
+import CreatePost from './CreatPost';
+
 
 function HomePage() {
+  
+  const App = () => {
+    const [articles, setArticles] = useState([]);
+  
+    const addArticle = (newArticle) => {
+      setArticles([...articles, newArticle]);
+    };  
+  }
+  
+  const navigate = useNavigate();
   return (
     <div className="home-page">
       {/* Hero Section */}
@@ -19,23 +33,29 @@ function HomePage() {
       {/* Featured Articles Section */}
       <section className="featured-articles">
         <h2>Featured Articles</h2>
-        <div className="article-grid">
-          <div className="article-card">
-            <img src="https://example.com/article1.jpg" alt="Article 1" />
-            <h3>Article Title 1</h3>
-            <p>Short description of article 1.</p>
+        <div className="featured-article-grid">
+          <div className="featured-article-card">
+            <img src="/one.jpg" alt="Article 1" />
+            <h3>📚 Mastering Time Management in College</h3>
+            <p>Discover effective tips and strategies to balance academics, extracurriculars, and personal time efficiently.</p>
           </div>
-          <div className="article-card">
-            <img src="https://example.com/article2.jpg" alt="Article 2" />
-            <h3>Article Title 2</h3>
-            <p>Short description of article 2.</p>
+          <div className="featured-article-card">
+            <img src="/two.jpg" alt="Article 2" />
+            <h3>💡 The Rise of AI in Education</h3>
+            <p>Explore how artificial intelligence is transforming learning experiences through personalized education and smart tools.</p>
           </div>
-          <div className="article-card">
-            <img src="https://example.com/article3.jpg" alt="Article 3" />
-            <h3>Article Title 3</h3>
-            <p>Short description of article 3.</p>
+          <div className="featured-article-card">
+            <img src="/three.jpg" alt="Article 3" />
+            <h3>🌿 Sustainable Living on Campus</h3>
+            <p>Learn how students are adopting eco-friendly practices through green initiatives and sustainable lifestyle choices.</p>
           </div>
         </div>
+      </section>
+
+      <section>
+        <button onClick={() => navigate("/create")}>
+          Create New Post
+        </button>
       </section>
 
       {/* Call to Action Section */}
