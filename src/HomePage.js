@@ -1,20 +1,13 @@
 import React,{useState} from 'react';
 import './HomePage.css';
 import './ArticlesPage.css'
+import './App.css'
 import { Link } from 'react-router-dom';
 import { useNavigate } from "react-router-dom";
 import CreatePost from './CreatPost';
 
 
 function HomePage() {
-  
-  const App = () => {
-    const [articles, setArticles] = useState([]);
-  
-    const addArticle = (newArticle) => {
-      setArticles([...articles, newArticle]);
-    };  
-  }
   
   const navigate = useNavigate();
   return (

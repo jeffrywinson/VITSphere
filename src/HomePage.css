@@ -50,8 +50,8 @@
     gap: 250px;
   }
   
-  .article-card {
-    background-color: #f7f7f7;
+  .featured-article-card {
+    background: linear-gradient(135deg, #33f3cd, #26c3f3);
     padding: 20px;
     border-radius: 10px;
     box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);

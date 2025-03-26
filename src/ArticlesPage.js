@@ -36,9 +36,6 @@ function ArticlesPage(props) {
   return (
     <div className="articles-page">
       <h1>Explore Our Articles</h1>
-      <div className='createArticle'>
-        <button onClick={submitNote}>Create Article</button>
-      </div>
       <div className="article-list">
         {articles.map((article, index)=>{
           return (
