@@ -1,10 +1,22 @@
+@import url('https://fonts.googleapis.com/css2?family=Merriweather:ital,opsz,wght@0,18..144,300..900;1,18..144,300..900&family=Roboto:wght@400;500;700&display=swap');
+
 .home-page {
-    font-family: Arial, sans-serif;
+  font-family: "Merriweather", serif;
     margin: 0;
     padding: 0;
   }
-  h2{
-    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+  h2 {
+    font-family: "Merriweather", serif;
+  }
+  #title{
+    display: flex;
+    justify-content: center;
+  }
+  h3{
+    font-family: "Merriweather", serif;
+    font-size: 25px;
+    padding: 8px;
+    color: black;
   }
   .hero {
     background-image: url("../public/vit.jpg");
@@ -55,6 +67,7 @@
     padding: 20px;
     border-radius: 10px;
     box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+   color: black;
   }
   
   .featured-article-card img {
@@ -148,3 +161,9 @@
   outline: none;
 }
   
+.featured-article-card:hover {
+  transform: scale(1.05); /* ✅ Slightly enlarge the card */
+  box-shadow: 0 10px 20px rgba(0, 0, 0, 0.3); /* ✅ Add deeper shadow */
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  cursor:pointer;
+}
