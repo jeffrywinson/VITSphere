@@ -20,11 +20,11 @@ const CreatePost = ({ addArticle }) => {
   };
 
   return (
-    <>
+    <div className='container'>
       <div className='create-post'>
         <form className='post-form' onSubmit={handleSubmit}>
           <label htmlFor="name">Post Name: </label>
-          <input
+          <input className='post-name'
             type="text"
             id="name"
             value={title}
@@ -34,7 +34,7 @@ const CreatePost = ({ addArticle }) => {
           />
 
           <label htmlFor="short">Short Description:</label>
-          <input
+          <input className='short-desc'
             type="text"
             id="short"
             value={shortDescription}
@@ -44,7 +44,7 @@ const CreatePost = ({ addArticle }) => {
           />
 
           <label htmlFor="content">Content: </label>
-          <textarea
+          <textarea className='post-content'
             value={content}
             onChange={(e) => setContent(e.target.value)}
             placeholder="Enter post content"
@@ -52,10 +52,10 @@ const CreatePost = ({ addArticle }) => {
             id="content"
           />
 
-          <button type="submit">Submit</button>
+          <button className='btn' type="submit">Submit</button>
         </form>
       </div>
-    </>
+    </div>
   );
 };
 
