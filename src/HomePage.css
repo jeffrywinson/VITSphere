@@ -8,6 +8,10 @@
   h2 {
     font-family: "Merriweather", serif;
   }
+  #title{
+    display: flex;
+    justify-content: center;
+  }
   h3{
     font-family: "Merriweather", serif;
     font-size: 25px;
@@ -157,3 +161,9 @@
   outline: none;
 }
   
+.featured-article-card:hover {
+  transform: scale(1.05); /* ✅ Slightly enlarge the card */
+  box-shadow: 0 10px 20px rgba(0, 0, 0, 0.3); /* ✅ Add deeper shadow */
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  cursor:pointer;
+}

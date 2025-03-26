@@ -1,13 +1,16 @@
 import React from "react";
 import { useNavigate } from "react-router-dom";
 
-
 const ArticlesPage = ({ articles, setArticles }) => {
   const navigate = useNavigate();
 
   const handleDelete = (index) => {
     const updatedArticles = articles.filter((_, i) => i !== index);
     setArticles(updatedArticles);
+  };
+
+  const handleClick = (index, article) => {
+    navigate(`/blog/${index}`, { state: { article } }); 
   };
 
   return (
@@ -17,12 +20,15 @@ const ArticlesPage = ({ articles, setArticles }) => {
       {articles.length > 0 ? (
         <div className="articles-container">
           {articles.map((article, index) => (
-            <div key={index} className="article-card">
+            <div
+              key={index}
+              className="article-card"
+              onClick={() => handleClick(index, article)}  
+            >
               <h3>{article.title}</h3>
               <p><strong>Description:</strong> {article.shortDescription}</p>
               <p><strong>Content:</strong> {article.content}</p>
-              
-              {/* ✅ Edit and Delete buttons */}
+
               <div className="button-container">
                 <button onClick={() => navigate(`/edit/${index}`)}>Edit</button>
                 <button onClick={() => handleDelete(index)}>Delete</button>
