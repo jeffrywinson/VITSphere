@@ -1,26 +1,54 @@
-import React from 'react';
+import React, {useState} from 'react';
 import './ArticlesPage.css';
+import Article from './components/Article';
 
 function ArticlesPage() {
+  const [articles, setArticles] = useState([])
+  const [article, setArticle] = useState({
+    title: "",
+    desc: "",
+    content: ""
+  });
+  function addArticle(newNote) {
+    setArticles(prevNotes => {
+      return [...prevNotes, newNote];
+    });
+  }
+
+  function deleteArticle(id) {
+    setArticles(prevNotes => {
+      return prevNotes.filter((article, index) => {
+        return index !== id;
+      });
+    });
+  }
+
+  function submitNote(event) {
+    props.onAdd(article);
+    setNote({
+      title: "",
+      desc: "",
+      content: ""
+    });
+    event.preventDefault();
+  }
+
   return (
     <div className="articles-page">
       <h1>Explore Our Articles</h1>
+      <div className='createArticle'>
+        <button onClick={submitNote}>Create Article</button>
+      </div>
       <div className="article-list">
-        <div className="article-card">
-          <h3>Article Title 1</h3>
-          <p>Short description of article 1.</p>
-          <button>Read More</button>
-        </div>
-        <div className="article-card">
-          <h3>Article Title 2</h3>
-          <p>Short description of article 2.</p>
-          <button>Read More</button>
-        </div>
-        <div className="article-card">
-          <h3>Article Title 3</h3>
-          <p>Short description of article 3.</p>
-          <button>Read More</button>
-        </div>
+        {articles.map((article, index)=>{
+          return (
+            <Article key = {index}
+            id = {index}
+            title = {article.title}
+            desc = {article.desc}
+            />
+          )
+        })}
       </div>
     </div>
   );
