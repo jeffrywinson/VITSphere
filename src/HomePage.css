@@ -7,7 +7,7 @@
     font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
   }
   .hero {
-    background-image: linear-gradient(to bottom, #f7f7f7, #e7e7e7);
+    background-image: url("../public/vit.jpg");
     background-size: cover;
     height: 100vh;
     display: flex;
@@ -17,6 +17,8 @@
   }
   
   .hero-content {
+    position: absolute;
+    top: 30%;
     text-align: center;
   }
   
@@ -48,16 +50,11 @@
     gap: 250px;
   }
   
-   .featured-article-card {
-    height:300x;
-    width: 300px;
+  .article-card {
+    background-color: #f7f7f7;
     padding: 20px;
-    background: linear-gradient(135deg, #1e4172, #2a7e98);
-    border-radius: 5%;
-  }
-
-  .create-button{
-    
+    border-radius: 10px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
   }
   
   .featured-article-card img {
