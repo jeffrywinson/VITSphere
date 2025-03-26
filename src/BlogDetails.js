@@ -1,5 +1,6 @@
 import React from 'react';
 import { useLocation, useNavigate,useParams} from 'react-router-dom';
+import './BlogDetails.css';
 
 const BlogDetails = ({articles}) => {
   const location = useLocation();
@@ -13,13 +14,13 @@ const BlogDetails = ({articles}) => {
 
   return (
     <div style={{ padding: '20px' }}>
-      <button onClick={() => navigate('/articles')}>← Go Back</button>  
+      <button className='btn' onClick={() => navigate('/articles')}>← Go Back</button>  
       
-      <div style={{ maxWidth: '800px', margin: '0 auto' }}>
+      <div className="blog-cont" style={{ maxWidth: '800px', margin: '0 auto' }}>
        
-        <h1>{article.title}</h1>
-        <h3>{article.shortDescription}</h3>
-        <p>{article.content}</p>
+        <h1 className='art-title'>{article.title}</h1>
+        <h3 className='art-desc'>{article.shortDescription}</h3>
+        <p className='art-cont'>{article.content}</p>
       </div>
     </div>
   );

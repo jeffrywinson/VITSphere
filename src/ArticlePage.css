@@ -53,3 +53,13 @@ strong{
     width: auto;
     height: fit-content;
 }
+
+.create-another{
+    width: 40%;
+}
+
+.create-another-container{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}

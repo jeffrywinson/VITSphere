@@ -21,8 +21,8 @@ const ArticlesPage = ({ articles, setArticles }) => {
       {articles.length > 0 ? (
         <div className="article-container">
           {articles.map((article, index) => (
-            <div key={index} className="article-card" onClick={() => handleClick(index, article)}> 
-              <h3 className="article-pg-header">{article.title}</h3>
+            <div key={index} className="article-card" > 
+              <h3 className="article-pg-header" onClick={() => handleClick(index, article)}>{article.title}</h3>
               <p className="article-pg-desc"><strong>Description:</strong> {article.shortDescription}</p>
               <p className="article-pg-content"><strong>Content:</strong> {article.content}</p>
               
@@ -32,7 +32,9 @@ const ArticlesPage = ({ articles, setArticles }) => {
               </div>
             </div>
           ))}
-          <button onClick={() => navigate("/create")}>Create Another Post!</button>
+          <div className="create-another-container">
+            <button className="btn create-another" onClick={() => navigate("/create")}>Create Another Post!</button>
+          </div>
         </div>
       ) : (
         <p className="initial">No articles yet. <button className="btn" onClick={() => navigate("/create")}>Create One!</button></p>

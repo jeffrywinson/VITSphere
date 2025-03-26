@@ -18,6 +18,9 @@
     padding: 8px;
     color: black;
   }
+  p{
+    font-family: 'Comfortaa', sans-serif;
+  }
   .hero {
     background-image: url("../public/vit.jpg");
     background-size: cover;

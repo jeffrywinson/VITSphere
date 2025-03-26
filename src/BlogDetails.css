@@ -1,0 +1,16 @@
+.blog-cont{
+    display: flex;
+    flex-direction: column;
+    gap: 2rem;
+    padding: 1rem;
+    background-color: azure;
+    border-radius: 10px;
+}
+
+.art-title{
+    font-family: "Merriweather", serif
+}
+
+.art-desc{
+    font-family: "Merriweather", sans-serif
+}
