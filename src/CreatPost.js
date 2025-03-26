@@ -12,7 +12,7 @@ const CreatePost = ({ addArticle }) => {
     e.preventDefault();
     if (title && shortDescription && content) {
       addArticle({ title, shortDescription, content });  
-      navigate("/articles");  // Redirect to articles page
+      navigate("/articles");
     } else {
       alert("Please fill in all fields!");
     }

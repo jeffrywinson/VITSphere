@@ -1,18 +1,14 @@
 import React,{useState} from 'react';
-import './HomePage.css';
-import './ArticlesPage.css'
-import './App.css'
 import { Link } from 'react-router-dom';
 import { useNavigate } from "react-router-dom";
-import CreatePost from './CreatPost';
-
+import './HomePage.css';
 
 function HomePage() {
   
   const navigate = useNavigate();
   return (
     <div className="home-page">
-      {/* Hero Section */}
+
       <section className="hero">
         <div className="hero-content">
           <h1>Welcome to College Insights</h1>
@@ -23,7 +19,6 @@ function HomePage() {
         </div>
       </section>
 
-      {/* Featured Articles Section */}
       <section className="featured-articles">
         <h2>Featured Articles</h2>
         <div className="featured-article-grid">
@@ -45,13 +40,13 @@ function HomePage() {
         </div>
       </section>
 
-      <section>
-        <button onClick={() => navigate("/create")}>
-          Create New Post
+      <section className='button-section'>
+        <button className="button-style" onClick={() => navigate("/create")}>
+          Create Post
         </button>
       </section>
 
-      {/* Call to Action Section */}
+  
       <section className="cta-section">
         <div className="cta-content">
           <h2>Stay Updated</h2>
@@ -62,6 +57,20 @@ function HomePage() {
           </form>
         </div>
       </section>
+
+    <section>
+      <div class="container">
+        <footer class="py-3 my-4">
+          <ul class="nav justify-content-center border-bottom pb-3 mb-3">
+            <li class="nav-item"><a href="#" class="nav-link px-2 text-body-secondary">Home</a></li>
+            <li class="nav-item"><a href="/create" class="nav-link px-2 text-body-secondary">Create</a></li>
+            <li class="nav-item"><a href="/articles" class="nav-link px-2 text-body-secondary">Articles</a></li>
+          </ul>
+          <p class="text-center text-body-secondary">© 2025 VITSphere, Inc</p>
+        </footer>
+      </div>
+    </section>
+
     </div>
   );
 }
