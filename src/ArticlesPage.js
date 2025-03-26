@@ -1,54 +1,53 @@
-import React, {useState} from 'react';
+
+import React from "react";
+import { useNavigate } from "react-router-dom";
 import './ArticlesPage.css';
-import Article from './components/Article';
 
-function ArticlesPage(props) {
-  const [articles, setArticles] = useState([])
-  const [article, setArticle] = useState({
-    title: "",
-    desc: "",
-    content: ""
-  });
-  function addArticle(newNote) {
-    setArticles(prevNotes => {
-      return [...prevNotes, newNote];
-    });
-  }
+const ArticlesPage = ({ articles, setArticles }) => {
+  const navigate = useNavigate();
 
-  function deleteArticle(id) {
-    setArticles(prevNotes => {
-      return prevNotes.filter((article, index) => {
-        return index !== id;
-      });
-    });
-  }
-
-  function submitNote(event) {
-    props.onAdd(article);
-    setArticle({
-      title: "",
-      desc: "",
-      content: ""
-    });
-    event.preventDefault();
-  }
+  // ✅ Delete handler
+  const handleDelete = (index) => {
+    const updatedArticles = articles.filter((_, i) => i !== index);
+    setArticles(updatedArticles);
+  };
 
   return (
-    <div className="articles-page">
-      <h1>Explore Our Articles</h1>
-      <div className="article-list">
-        {articles.map((article, index)=>{
-          return (
-            <Article key = {index}
-            id = {index}
-            title = {article.title}
-            desc = {article.desc}
-            />
-          )
-        })}
-      </div>
+    <div>
+      <h2>Articles</h2>
+
+      {articles.length > 0 ? (
+        <div className="articles-container">
+          {articles.map((article, index) => (
+            <div key={index} className="article-card">
+              <h3>{article.title}</h3>
+              <p><strong>Description:</strong> {article.shortDescription}</p>
+              <p><strong>Content:</strong> {article.content}</p>
+              
+              {/* ✅ Delete button */}
+              <button onClick={() => handleDelete(index)}>Delete</button>
+            </div>
+          ))}
+        </div>
+      ) : (
+        <p>No articles yet. <button onClick={() => navigate("/create")}>Create One!</button></p>
+      )}
+      <div className="featured-article-card">
+            <h3>📚 Mastering Time Management in College</h3>
+            <p>Discover effective tips and strategies to balance academics, extracurriculars, and personal time efficiently.</p>
+          </div>
+          <div className="featured-article-card">
+            
+            <h3>💡 The Rise of AI in Education</h3>
+            <p>Explore how artificial intelligence is transforming learning experiences through personalized education and smart tools.</p>
+          </div>
+          <div className="featured-article-card">
+          
+            <h3>🌿 Sustainable Living on Campus</h3>
+            <p>Learn how students are adopting eco-friendly practices through green initiatives and sustainable lifestyle choices.</p>
+          </div>
     </div>
   );
-}
+};
 
 export default ArticlesPage;

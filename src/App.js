@@ -18,7 +18,7 @@ function App() {
       <Routes>
         <Route path="/" element={<HomePage />} />
         <Route path="/create" element={<CreatePost addArticle={addArticle1} />} />
-        <Route path="/articles" element={<ArticlesPage articles={articles} />} />
+        <Route path="/articles" element={<ArticlesPage articles={articles} setArticles={setArticles} />} />
       </Routes>
     </BrowserRouter>
   );
